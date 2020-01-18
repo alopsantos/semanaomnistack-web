@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 function FarmaciaFormDelete({onSubmit}){
-
+    
     return(
         <div className="edit">
                 <form onSubmit={handleDelete}>
