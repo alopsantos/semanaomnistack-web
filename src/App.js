@@ -26,7 +26,11 @@ function App() {
     }
     loadFarmacias();
   }, []);
+  async function handleDelete(data) {
+    const response = await api.delete('/farmacia', data);
 
+    setFarmacias([...farmacias, response.data]);
+  }
   async function handleAddDev(data) {
     //event.preventDefault();
 

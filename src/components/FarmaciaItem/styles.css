@@ -1,25 +1,44 @@
-
-
-li.dev-item{
+li.farmacia-item .edit{
+    margin-top: 10px;
+}
+li.farmacia-item .edit button[type=submit]{
+    width: calc(50%/2);
+    border: 0;
+    margin-top: 10px;
+    background: #7d40e7;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.8s;
+    float: right;
+}
+li.farmacia-item .edit button[type=submit]:hover{
+    background: #bf40bf;
+}
+li.farmacia-item{
     background: #FFF;
     box-shadow: 0 0 14px 0 rgba(0,0,0, 0.02);
     border-radius: 2px;
     padding: 20px;
+    display: grid;
 }
 
-li.dev-item header{
+li.farmacia-item header{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-li.dev-item header img{
+li.farmacia-item header img{
     width: 54px;
     height: 54px;
     border-radius: 50px;
 }
 
-li.dev-item header .user-info{
+li.farmacia-item header .user-info{
     margin-left: 10px;
 }
 
@@ -29,18 +48,18 @@ li.dev-item header .user-info{
     color: #333;
 }
 
-li.dev-item p{
+li.farmacia-item p{
     color: #666;
     font-size: 14px;
     line-height: 20px;
     margin: 10px 0;
 }
 
-li.dev-item a{
+li.farmacia-item a{
     color: #8e4dff;
     font-size: 14px;
     text-decoration: none;
 }
-li.dev-item a:hover {
+li.farmacia-item a:hover {
     color:#5a2ea6
 }

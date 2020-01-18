@@ -25,6 +25,6 @@
 }
 @media (max-width: 650px){
     #app main ul{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
