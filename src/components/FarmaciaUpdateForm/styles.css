@@ -1,7 +1,7 @@
-aside .btn-container{
+aside.farmacia-form .btn-container{
     margin-top: 30px !important;
 }
-aside .btn-container button{
+aside.farmacia-form .btn-container button{
     width: calc(100%/2);
     border: 0;
     background: #7d40e7;
@@ -15,16 +15,16 @@ aside .btn-container button{
     float: right;
 }
 
-aside .btn-container button:hover{
+aside.farmacia-form .btn-container button:hover{
     background: #bf40bf;
 }
 
-aside .btn-container button + button{
+aside.farmacia-form .btn-container button + button{
     margin-left: 10px;
 }
-aside .btn-container .btn-group {
+aside.farmacia-form .btn-container .btn-group {
     width: 100%;
 }
-aside .MuiButtonGroup-contained{
+aside.farmacia-form .MuiButtonGroup-contained{
     box-shadow: none;
 }

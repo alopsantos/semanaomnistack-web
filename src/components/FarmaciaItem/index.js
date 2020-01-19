@@ -3,6 +3,7 @@ import { Edit, Delete } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 
 import './styles.css';
+
 function FarmaciaItem({ farmacia, onDeleteForm, onUpdateClick }) {
     const { _id, urllogo, name, phone, address } = farmacia;
     
@@ -18,7 +19,7 @@ function FarmaciaItem({ farmacia, onDeleteForm, onUpdateClick }) {
             <div className="conteudo">
                 <header>
                     <img src={urllogo} alt="" />
-                    <div className="user-info">
+                    <div className="farmacia-info">
                         <strong>{name}</strong>
                         <span>{phone}</span>
                     </div>

@@ -1,0 +1,131 @@
+aside.plantao-form form{
+    margin-top: 30px;
+}
+
+aside.plantao-form  form .input-block + .input-block{
+    margin-top: 20px;
+}
+
+aside.plantao-form  form .input-group{
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside.plantao-form  form .input-group .input-block {
+    margin-top: 0;
+}
+
+aside.plantao-form  form .input-block label{
+    color: #ACACAC;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+
+aside.plantao-form  form .input-block input{
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid #EEE;
+}
+
+aside.plantao-form  form button[type=submit]{
+    width: 100%;
+    border: 0;
+    margin-top: 30px;
+    background: #7D40E7;
+    border-radius: 2px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+aside.plantao-form form input[type=date]{
+    width: 65%;
+}
+aside.plantao-form form select{
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    border: 0;
+    margin-top: 10px;
+}
+
+aside.plantao-form  form button[type=submit]:hover{
+    background: #6931CA;
+}
+li.plantao-item .plantao-edit{
+    margin-top: 10px;
+}
+li.plantao-item .plantao-edit button{
+    width: calc(50%/2);
+    border: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: #7d40e7;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.8s;
+    float: right;
+}
+li.plantao-item .plantao-edit button + .plantao-edit button{
+    margin-left: 10px;
+}
+li.plantao-item .plantao-edit button:hover{
+    background: #bf40bf;
+}
+li.plantao-item{
+    background: #FFF;
+    box-shadow: 0 0 14px 0 rgba(0,0,0, 0.02);
+    border-radius: 2px;
+    padding: 20px;
+    display: grid;
+}
+
+li.plantao-item header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li.plantao-item header img{
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+}
+
+li.plantao-item header .plantao-info{
+    margin-left: 10px;
+}
+
+.plantao-info strong{
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+li.plantao-item p{
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+}
+
+li.plantao-item a{
+    color: #8e4dff;
+    font-size: 14px;
+    text-decoration: none;
+}
+li.plantao-item a:hover {
+    color:#5a2ea6
+}

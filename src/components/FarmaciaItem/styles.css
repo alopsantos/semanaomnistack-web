@@ -42,11 +42,11 @@ li.farmacia-item header img{
     border-radius: 50px;
 }
 
-li.farmacia-item header .user-info{
+li.farmacia-item header .farmacia-info{
     margin-left: 10px;
 }
 
-.user-info strong{
+.farmacia-info strong{
     display: block;
     font-size: 16px;
     color: #333;
