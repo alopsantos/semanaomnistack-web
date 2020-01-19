@@ -1,10 +1,11 @@
 li.farmacia-item .edit{
     margin-top: 10px;
 }
-li.farmacia-item .edit button[type=submit]{
+li.farmacia-item .edit button{
     width: calc(50%/2);
     border: 0;
     margin-top: 10px;
+    margin-left: 10px;
     background: #7d40e7;
     border-radius: 2px;
     padding: 5px;
@@ -15,7 +16,10 @@ li.farmacia-item .edit button[type=submit]{
     transition: background 0.8s;
     float: right;
 }
-li.farmacia-item .edit button[type=submit]:hover{
+li.farmacia-item .edit button + .edit button{
+    margin-left: 10px;
+}
+li.farmacia-item .edit button:hover{
     background: #bf40bf;
 }
 li.farmacia-item{

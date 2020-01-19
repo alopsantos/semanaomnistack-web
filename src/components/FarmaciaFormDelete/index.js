@@ -1,16 +1,16 @@
 import React from 'react';
-import './style.css';
+import './styles.css';
 
-function FarmaciaFormDelete({onSubmit}){
+function FarmaciaFormDelete(){
     
     return(
         <div className="edit">
-                <form onSubmit={handleDelete}>
+                <form>
                     <input 
                         type="hidden"
                         id="farmacaiId"
-                        value={farmacia._id} 
-                        onChange={event => setFarmaciaId(event.target.value)}
+                        //value={farmacia._id} 
+                        //onChange={event => setFarmaciaId(event.target.value)}
                     />
                     <button type="submit">Excluir</button>
                 </form>

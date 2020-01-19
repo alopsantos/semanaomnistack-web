@@ -27,7 +27,7 @@ function FarmaciaForm({ onSubmit }) {
         )
     }, []);
 
-    async function handleSubmit(event) {
+    async function handleAddFamacia(event) {
         event.preventDefault();
 
         await onSubmit({
@@ -46,7 +46,7 @@ function FarmaciaForm({ onSubmit }) {
         setEmail('');
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleAddFamacia}>
             <div className="input-block">
                 <label htmlFor="">Nome</label>
                 <input
@@ -126,6 +126,7 @@ function FarmaciaForm({ onSubmit }) {
 
             <button type="submit">Salvar</button>
         </form>
+        
     );
 }
 

@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
-import FarmaciaFormDelete from '../FarmaciaFormDelete';
+import React from 'react';
+import { Edit, Delete } from '@material-ui/icons';
+import { Button } from '@material-ui/core';
 
 import './styles.css';
-function FarmaciaItem({ farmacia }) {
-    const [ farmaciaId, setFarmaciaId] = useState('');
-    function handleDelete(event){
-        event.preventDefault();
-        //const response = await api.delete('/farmacia', farmaciaId);
-        console.log(farmaciaId);
+function FarmaciaItem({ farmacia, onDeleteForm, onUpdateClick }) {
+    const { _id, urllogo, name, phone, address } = farmacia;
+    
+    async function handleDelete(){
+        await onDeleteForm({ _id })
     }
+    async function handleUpdateState(){
+        await onUpdateClick({ _id, name })
+    }
+
     return (
         <li className="farmacia-item">
             <div className="conteudo">
                 <header>
-                    <img src={farmacia.urllogo} alt="" />
+                    <img src={urllogo} alt="" />
                     <div className="user-info">
-                        <strong>{farmacia.name}</strong>
-                        <span>{farmacia.phone}</span>
+                        <strong>{name}</strong>
+                        <span>{phone}</span>
                     </div>
                 </header>
-                <p>{farmacia.address.join(', ')}</p>
+                <p>{address.join(', ')}</p>
                 <a href="https://wwww.estacaodamodastore.com.br">Acessar site</a>
             </div>
-            <FarmaciaFormDelete />
+            <div className="btn-container edit">
+                <Button size="small" color="secondary" onClick={handleDelete} ><Delete fontSize="default" /></Button>
+                <Button size="small" color="primary" onClick={handleUpdateState} ><Edit fontSize="default" /></Button>
+            </div>
         </li>
     );
 }

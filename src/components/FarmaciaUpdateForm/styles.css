@@ -1,0 +1,30 @@
+aside .btn-container{
+    margin-top: 30px !important;
+}
+aside .btn-container button{
+    width: calc(100%/2);
+    border: 0;
+    background: #7d40e7;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.8s;
+    float: right;
+}
+
+aside .btn-container button:hover{
+    background: #bf40bf;
+}
+
+aside .btn-container button + button{
+    margin-left: 10px;
+}
+aside .btn-container .btn-group {
+    width: 100%;
+}
+aside .MuiButtonGroup-contained{
+    box-shadow: none;
+}
