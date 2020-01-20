@@ -5,11 +5,6 @@ import FarmaciaForm from '../../components/FarmaciaForm';
 import FarmaciaItem from '../../components/FarmaciaItem';
 import FarmaciaUpdateForm from '../../components/FarmaciaUpdateForm';
 
-
-// Componente: Bloco isolado de HTML, CSS e JS, o qual nao interfere no restante da aplicacao.
-// Propriedade: Informações que um componente PAI passa para o componente FILHO.
-// Estado: Informações mantidas pelo componente (Lembrar: imutabilidade).
-
 function Dashboard() {
   const [farmacias, setFarmacias] = useState([]);
   const [atualFarmacia, setAtualFarmacia] = useState('')
@@ -72,7 +67,7 @@ function Dashboard() {
     }
   }
   return (
-    <div id="app">
+    <>
       {loadMode()}
       <main>
         <ul>
@@ -81,7 +76,7 @@ function Dashboard() {
           ))}
         </ul>
       </main>
-    </div>
+    </>
   );
 }
 
