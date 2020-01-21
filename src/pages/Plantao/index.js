@@ -4,6 +4,7 @@ import api from '../../services/api';
 import PlantaoItem from '../../components/PlantaoItem';
 import PlantaoForm from '../../components/PlantaoForm';
 import PlantaoUpdateForm from '../../components/PlantaoUpdateForm';
+
 import './styles.css';
 
 // Componente: Bloco isolado de HTML, CSS e JS, o qual nao interfere no restante da aplicacao.
@@ -25,17 +26,21 @@ function Plantao() {
 
   async function handleAddPlantao(data) {
     const response = await api.post('/plantoes', data);
+
     setPlantoes([response.data, ...plantoes]);
   }
 
-  async function handleDelete(data) {
+  async function handleDeletePlantao(data) {
     await api.delete(`/plantao/${data._id}`);
+    
     const filterPlantoes = plantoes.filter(plantao => plantao._id !== data._id);
+    
     setPlantoes(filterPlantoes);
   }
 
-  async function handleUpdate(data) {
+  async function handleUpdatePlantao(data) {
     await api.put(`/plantao/${atualPlantao._id}`, data);
+
     loadPlantoes();
     setMode();
   }
@@ -46,7 +51,7 @@ function Plantao() {
         <aside className="plantao-form">
           <strong>Editar Plantão</strong>
 
-          <PlantaoUpdateForm onUpdataForm={handleUpdate} onCancela={setMode} plantao={atualPlantao} />
+          <PlantaoUpdateForm onUpdataForm={handleUpdatePlantao} onCancela={setMode} plantao={atualPlantao} />
         </aside>
       )
     } else {
@@ -75,7 +80,7 @@ function Plantao() {
     <main>
       <ul>
         {plantoes.map(plantao => (
-          <PlantaoItem key={plantao._id} plantao={plantao} onDeleteForm={handleDelete} onUpdateClick={setMode} />
+          <PlantaoItem key={plantao._id} plantao={plantao} onDeleteForm={handleDeletePlantao} onUpdateClick={setMode} />
         ))}
       </ul>
     </main>
