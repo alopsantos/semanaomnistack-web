@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function PlantaoForm({ onSubmit }) {
-  const [farmaciaId, setFarmaciaid] = useState('');
+  const [farmaciaId, setFarmaciaId] = useState('');
   const [datainicio, setDatainicio] = useState('');
   const [datafim, setDatafim] = useState('');
 
@@ -20,11 +20,13 @@ function PlantaoForm({ onSubmit }) {
       <form onSubmit={handleAddPlantao}>
         <div className="input-block">
           <label htmlFor="">Farmacia</label>
-          <select id="farmacia" >
-            <option value="1">Farmautil</option>
-            <option value="2">Biofarma</option>
-            <option value="3">Clarifarma</option>
-          </select>
+          <input type="text" 
+            name="farmaciaid"
+            id="farmaciaid"
+            required
+            value={farmaciaId}
+            onChange={event => setFarmaciaId(event.target.value)}
+          />
         </div>
         <div className="input-group">
           <div className="input-block">
@@ -52,5 +54,7 @@ function PlantaoForm({ onSubmit }) {
         <button type="submit">Salvar</button>
       </form>
     </>
-  )}
-export default PlantaoForm();
+  )
+}
+
+export default PlantaoForm;

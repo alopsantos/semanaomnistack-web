@@ -140,4 +140,4 @@ function FarmaciaUpdateForm({ onUpdataForm, onCancela, farmacia }) {
     );
 }
 
-export default FarmaciaUpdateForm;
+export default FarmaciaUpdateForm; 

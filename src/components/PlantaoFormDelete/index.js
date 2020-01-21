@@ -6,5 +6,7 @@ function PlantaoFormDelete({ onSubmit }) {
     <>
     
     </>
-  )}
+  )
+}
+
 export default PlantaoFormDelete();

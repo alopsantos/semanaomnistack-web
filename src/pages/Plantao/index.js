@@ -35,7 +35,7 @@ function Plantao() {
   }
 
   async function handleUpdate(data) {
-    await api.put(`/farmacia/${atualPlantao._id}`, data);
+    await api.put(`/plantao/${atualPlantao._id}`, data);
     loadPlantoes();
     setMode();
   }
@@ -82,5 +82,4 @@ function Plantao() {
     </>
   );
 }
-
 export default Plantao;

@@ -130,4 +130,4 @@ function FarmaciaForm({ onSubmit }) {
     );
 }
 
-export default FarmaciaForm;
+export default FarmaciaForm; 

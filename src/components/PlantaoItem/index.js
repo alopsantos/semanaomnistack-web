@@ -3,8 +3,8 @@ import { Edit, Delete } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 
 //import './styles.css';
-function PlantaoItem({ farmacia, plantao, onDeleteForm, onUpdateClick }) {
-  const {  urllogo, name, phone, address} = farmacia;
+function PlantaoItem({ plantao, onDeleteForm, onUpdateClick }) {
+  //const {  urllogo, name, phone, address} = farmacia;
   const { _id, farmaciaid, datainicio, datafim } = plantao;
 
   async function handleDelete(){
@@ -20,14 +20,14 @@ function PlantaoItem({ farmacia, plantao, onDeleteForm, onUpdateClick }) {
       <li className="plantao-item">
             <div className="conteudo">
               <header>
-                <img src={urllogo} alt="" />
+                <img src="" alt="" />
                 <div className="plantao-info">
-                  <strong>{name}</strong>
+                  <strong>Nome: {farmaciaid}</strong>
                   <strong>Inicio: {datainicio}</strong>
                   <strong>Fim: {datafim}</strong>
                 </div>
               </header>
-              <p>Fone: {phone}</p>
+              <p>Fone: (45) 3541-2940</p>
             </div>
             <div className="btn-container plantao-edit">
               <Button size="small" color="secondary" onClick={handleDelete}  ><Delete fontSize="default" /></Button>
