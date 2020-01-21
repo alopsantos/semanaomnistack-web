@@ -3,39 +3,41 @@ import { Button, ButtonGroup } from '@material-ui/core'
 
 function PlantaoUpdateForm({ onUpdataForm, onCancela, plantao }) {
   const [atualPlantao, setAtualPlantao] = useState('');
-  const [farmaciaId, setFarmaciaid] = useState('');
+  const [farmaciaid, setFarmaciaId] = useState('');
   const [datainicio, setDatainicio] = useState('');
   const [datafim, setDatafim] = useState('');
 
   useEffect(() => {
     setAtualPlantao(plantao);
   }, [plantao]);
+
   async function handleUpPlantao(event) {
     event.preventDefault();
     await onUpdataForm({
-      farmaciaId,
+      farmaciaid,
       datainicio,
       datafim
-    });
+    });    
   }
+  
   function handleExit(event) {
     event.preventDefault();
     onCancela();
   }
   return (
     <>
-      <form onSubmit={handleUpPlantao}>
+      <form id="edit-form" onSubmit={handleUpPlantao}>
         <div className="input-block">
-  <label htmlFor="">Farmacia: {atualPlantao}</label>
+          <label htmlFor="">Farmacia: {atualPlantao._id}</label>
           <input type="text"
             name="farmaciaid"
             id="farmaciaid"
             required
-            value={farmaciaId}
-            onChange={event => setFarmaciaid(event.target.value)}
+            value={farmaciaid}
+            onChange={event => setFarmaciaId(event.target.value)}
           />
         </div>
-        <div className="input-group">
+        <div id="edit-form" className="input-group">
           <div className="input-block">
             <label htmlFor="">Inicio</label>
             <input
