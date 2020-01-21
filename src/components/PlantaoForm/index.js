@@ -21,8 +21,8 @@ function PlantaoForm({ onSubmit }) {
         <div className="input-block">
           <label htmlFor="">Farmacia</label>
           <input type="text" 
-            name="farmaciaid"
-            id="farmaciaid"
+            name="farmaciaId"
+            id="farmaciaId"
             required
             value={farmaciaId}
             onChange={event => setFarmaciaId(event.target.value)}

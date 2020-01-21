@@ -43,7 +43,7 @@ function Dashboard() {
     if (editMode) {
       return (
         <aside className="farmacia-form">
-          <strong>Editar</strong>
+          <strong>Editar Farmacia</strong>
           
           <FarmaciaUpdateForm onUpdataForm={handleUpdate} onCancela={setMode} farmacia={atualFarmacia} />
         </aside>
@@ -51,7 +51,8 @@ function Dashboard() {
     } else {
       return (
         <aside className="farmacia-form">
-          <strong>Cadastrar</strong>
+          <strong>Cadastrar Farmacia</strong>
+          
           <FarmaciaForm onSubmit={handleAddFamacia} />
         </aside>
       )
