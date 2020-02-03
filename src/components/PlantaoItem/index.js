@@ -20,14 +20,14 @@ function PlantaoItem({ plantao, onDeleteForm, onUpdateClick }) {
       <li className="plantao-item">
             <div className="conteudo">
               <header>
-                <img src="" alt="" />
+                <img src={plantao.farmacia.urllogo} alt="" />
                 <div className="plantao-info">
-                  <strong>Nome: {farmaciaid}</strong>
+                  <strong>Nome: {plantao.farmacia.name}</strong>
                   <strong>Inicio: {datainicio}</strong>
                   <strong>Fim: {datafim}</strong>
                 </div>
               </header>
-              <p>Fone: (45) 3541-2940</p>
+              <p>Fone: {plantao.farmacia.phone}</p>
             </div>
             <div className="btn-container plantao-edit">
               <Button size="small" color="secondary" onClick={handleDelete}  ><Delete fontSize="default" /></Button>

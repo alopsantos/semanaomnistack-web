@@ -2,9 +2,7 @@ import React from 'react';
 
 
 export default function Login({ history }) {
-
-
-    
+ 
     return (
         <>
             <aside className="dashboard">

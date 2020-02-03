@@ -25,9 +25,10 @@ function Plantao() {
   }, []);
 
   async function handleAddPlantao(data) {
+    console.log(data.farmaciaId);
     const response = await api.post('/plantoes', data);
-
-    setPlantoes([response.data, ...plantoes]);
+    loadPlantoes();
+    //setPlantoes([response.data, ...plantoes]);
   }
 
   async function handleDeletePlantao(data) {
